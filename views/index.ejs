@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Posting Hub</title>
+    <link rel="stylesheet" href="/style.css"/>
+</head>
+<body>
+    <h1>Technological Posts</h1>
+    <a href="http://localhost:8080/posts/new">Create new posts</a>
+    <% for(element of posts){ %>
+        <div>
+            <h3> <%= element.name %> </h3>
+            <p> <%=element.content %> </p>
+            <a href="posts/<%= element.id %>">See in details</a>
+            <a href="posts/<%= element.id %>/update">Update post</a><br><br>
+            <form method="post" action="posts/<%= element.id %>?_method=DELETE">
+                <button>Delete Post</button>
+            </form>
+        </div> 
+        <hr>
+    <% } %>
+</body>
+</html>

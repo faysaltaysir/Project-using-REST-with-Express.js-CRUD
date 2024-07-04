@@ -1,0 +1,12 @@
+h1{
+    color:darkblue;
+    display: inline-block;
+}
+h3{
+    color: rgb(6, 75, 250);
+    
+}
+.block{
+    display: block;
+    margin: 10px;
+}
